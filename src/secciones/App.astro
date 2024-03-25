@@ -1,0 +1,183 @@
+---
+import Titulo from "./Titulo.astro"
+---
+
+<section>
+    <div class="container-section">
+        
+        <div class="img-fondo">
+           
+            <Titulo />
+            <div class="container-tarjetas">
+                <div class="containerTextArea">
+                    <div class="tarjeta1">
+                        <select class="first">
+                        </select>
+                        <textarea class="fromText" placeholder="Ingresar Texto"></textarea>
+                        <div class="iconos-1">
+                            <button class="read iconButton">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-volume"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 8a5 5 0 0 1 0 8" /><path d="M17.7 5a9 9 0 0 1 0 14" /><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" /></svg>
+                            </button>
+                            <button class="listen iconButton">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-microphone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 2m0 3a3 3 0 0 1 3 -3h0a3 3 0 0 1 3 3v5a3 3 0 0 1 -3 3h0a3 3 0 0 1 -3 -3z" /><path d="M5 10a7 7 0 0 0 14 0" /><path d="M8 21l8 0" /><path d="M12 17l0 4" /></svg>
+                            </button>
+                            <button class="translate">Translate</button> 
+                        </div>
+                        
+                    </div>
+
+                    <div class="header">
+                        <button class="iconButton" id="change">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-transfer"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 10h-16l5.5 -6" /><path d="M4 14h16l-5.5 6" /></svg>
+                        </button>
+                    </div>
+                    <div class="tarjeta2">
+                        <select class="second"></select>
+                        <textarea class="toText" placeholder="Traducción"></textarea>
+                        <div class="iconos-2"> 
+                            <button class="read iconButton">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-volume"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 8a5 5 0 0 1 0 8" /><path d="M17.7 5a9 9 0 0 1 0 14" /><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" /></svg>
+                            </button>
+                        </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</section>
+
+<style>
+    section{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-section{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-fondo{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0, 1)), url('img/hero_img.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: brightness(100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    .img-fondo .tarjeta{
+        width: 200px;
+        height: 400px;
+        background-color: rgba(4, 7, 17, .7);
+        backdrop-filter: blur(4rem);
+    }
+
+    /* Estilos de las tarjetas */
+
+    select{
+        background-color: rgba(4, 7, 17, .7);
+        border: none;
+        outline: none;
+        color: white;
+        backdrop-filter: blur(4px);
+        margin-bottom: 10px;
+    }
+
+    .header{
+        display: flex;
+        
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .iconButton{
+        border: 0;
+        background: none;
+        font-size: 15px;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    .containerTextArea{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+
+    textarea{
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        outline: none;
+        resize: none;
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    .translate{
+        background-color: #3662E3;
+        cursor: pointer;
+        color: white;
+        border: none;
+        font-size: 1.3em;
+        padding: 5px 12px;
+        border-radius: 10px;
+    }
+
+    .tarjeta1{
+        height: 350px;
+        background-color: rgba(4, 7, 17, .7);
+        backdrop-filter: blur(4rem);
+        border-radius: 20px;
+        border: 1px solid white;
+        padding: 20px 20px 40px 20px;
+    }
+
+    .tarjeta2{
+        height: 350px;
+        background-color: rgba(4, 7, 17, .7);
+        backdrop-filter: blur(4px);
+        border-radius: 20px;
+        border: 1px solid white;
+        padding: 20px 20px 40px 20px;
+
+    }
+
+    .container-tarjetas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .iconos-1{
+        display: flex;
+        padding: 20px 0px;
+        gap: 20px;
+    }
+
+    .iconos-2{
+        display: flex;
+        padding: 20px 0px;;
+    }
+</style>
+
